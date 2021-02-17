@@ -2,16 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HomeWork.MainPage">
-    <TableView Intent="Menu">
-        <TableRoot>
-            <TableSection>
-                <TextCell Text="XAML ToolbarItem"
-                          Detail="Implement a ToolbarItem in XAML" />
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary"
+                     Text="Icon Item"
+                     Priority="0"
+                     IconImageSource="icon.png"
+                     Clicked="OnItemClicked" />
+        <ToolbarItem Order="Primary"
+                     Text="Text Item"
+                     Priority="1"
+                     Clicked="OnItemClicked" />
+        <ToolbarItem Order="Secondary"
+                     Text="Secondary Text Item"
+                     Priority="2"
+                     Clicked="OnItemClicked" />
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <Label x:Name="messageLabel"
+               Text="Click a toolbar item."
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+    </StackLayout>
 
-                <TextCell Text="Code ToolbarItem"
-                          Detail="Implement a ToolbarItem in code" />
-
-            </TableSection>
-        </TableRoot>
-    </TableView>
 </ContentPage>
