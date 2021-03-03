@@ -1,16 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HomeWork.MainPage">
+             x:Class="HomeWork.MainPage"
+             Title="accessories">
     <ContentPage.ToolbarItems>
         <ToolbarItem Order="Primary"
                      Text="Icon Item"
                      Priority="0"
-                     IconImageSource="icon.png"
-                     Clicked="OnItemClicked" />
-        <ToolbarItem Order="Primary"
-                     Text="Text Item"
-                     Priority="1"
+                     IconImageSource="baseline_search_white_18dp.png"
                      Clicked="OnItemClicked" />
         <ToolbarItem Order="Secondary"
                      Text="Secondary Text Item"
@@ -18,10 +15,5 @@
                      Clicked="OnItemClicked" />
     </ContentPage.ToolbarItems>
     <StackLayout>
-        <Label x:Name="messageLabel"
-               Text="Click a toolbar item."
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
     </StackLayout>
-
 </ContentPage>

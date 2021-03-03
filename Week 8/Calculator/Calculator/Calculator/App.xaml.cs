@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace HomeWork
+namespace Calculator
 {
     public partial class App : Application
     {

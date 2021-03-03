@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeWork.Accessories">
+    <ContentPage.Resources>
+        <Style TargetType="Frame" x:Key="UnitAccessory">
+            <Setter Property="BackgroundColor" Value="OrangeRed" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="FlexLayout.WidthRequest" Value="200" />
+            <Setter Property="FlexLayout.Grow" Value="0" />
+            <Setter Property="CornerRadius" Value="0" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label HorizontalOptions="FillAndExpand">Sort by</Label>
+                <Label HorizontalOptions="FillAndExpand">Filter</Label>
+                <Image Source="baseline_grid_view_black_18dp.png" />
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <FlexLayout Wrap="Wrap" JustifyContent="Center">
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                        <Frame Style="{DynamicResource UnitAccessory}">
+                            <Label>test</Label>
+                        </Frame>
+                    </FlexLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

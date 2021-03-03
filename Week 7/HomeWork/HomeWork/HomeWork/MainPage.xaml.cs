@@ -13,6 +13,12 @@ namespace HomeWork
         public MainPage()
         {
             InitializeComponent();
+
+            Navigation.PushAsync(new Accessories());
+        }
+
+        void OnItemClicked(object sender, EventArgs args)
+        {
         }
     }
 }

@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5C94AC8F-88E5-4D58-8191-29EF02350365}</ProjectGuid>
+    <ProjectGuid>{2C294A23-59D4-4D5D-87F2-0DC69D225F7E}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>HomeWork.Droid</RootNamespace>
-    <AssemblyName>HomeWork.Android</AssemblyName>
+    <RootNamespace>Calculator.Droid</RootNamespace>
+    <AssemblyName>Calculator.Android</AssemblyName>
     <Deterministic>True</Deterministic>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -86,15 +86,12 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\baseline_grid_view_black_18dp.png" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\baseline_search_white_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HomeWork\HomeWork.csproj">
-      <Project>{38e38af9-69ff-416b-981c-f41a2914344f}</Project>
-      <Name>HomeWork</Name>
+    <ProjectReference Include="..\Calculator\Calculator.csproj">
+      <Project>{8CEAD58E-CF96-45B7-97C2-22E14C868169}</Project>
+      <Name>Calculator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Padding="5,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Black" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="resultText" Grid.RowSpan="2" Grid.ColumnSpan="4" Style="{StaticResource CalcScreen}" Text="0" />
+                <Button Grid.Row="2" Text="7" Style="{StaticResource CalcButton}" Clicked="OnSelectNumber" />
+                <Button Grid.Row="2" Grid.Column="1" Text="8" Style="{StaticResource CalcButton}" Clicked="OnSelectNumber" />
+                <Button Grid.Row="2" Grid.Column="2" Text="9" Style="{StaticResource CalcButton}" Clicked="OnSelectNumber" />
+                <Button Grid.Row="2" Grid.Column="3" Text="÷" Style="{StaticResource CalcAlternativeButton}" Clicked="OnSelectOperator" />
+                <Button Grid.Row="3" Text="4" Style="{StaticResource CalcButton}" Clicked="OnSelectNumber" />
+                <Button Grid.Row="3" Grid.Column="1" Text="5" Style="{StaticResource CalcButton}" Clicked="OnSelectNumber" />
+                <Button Grid.Row="3" Grid.Column="2" Text="6" Style="{StaticResource CalcButton}" Clicked="OnSelectNumber" />
+                <Button Grid.Row="3" Grid.Column="3" Text="×" Style="{StaticResource CalcAlternativeButton}" Clicked="OnSelectOperator"/>
+                <Button Grid.Row="4" Text="1" Style="{StaticResource CalcButton}" Clicked="OnSelectNumber" />
+                <Button Grid.Row="4" Grid.Column="1" Text="2" Style="{StaticResource CalcButton}" Clicked="OnSelectNumber" />
+                <Button Grid.Row="4" Grid.Column="2" Text="3" Style="{StaticResource CalcButton}" Clicked="OnSelectNumber" />
+                <Button Grid.Row="4" Grid.Column="3" Text="-" Style="{StaticResource CalcAlternativeButton}" Clicked="OnSelectOperator" />
+                <Button Grid.Row="5" Grid.ColumnSpan="3" Text="0" Style="{StaticResource CalcButton}" Clicked="OnSelectNumber" />
+                <Button Grid.Row="5" Grid.Column="3" Text="+" Style="{StaticResource CalcAlternativeButton}" Clicked="OnSelectOperator" />
+                <Button Grid.Row="6" Text="C" Style="{StaticResource CalcCleanButton}" Clicked="OnClear" />
+                <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Text="=" Style="{StaticResource CalcAlternativeButton}" Clicked="OnCalculate" />
+            </Grid>
+            <Button Text="Page1" Clicked="OnPage" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

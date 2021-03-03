@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.App">
+    <Application.Resources>
+        
+        <Color x:Key="AppBackgroundColor">Black</Color>
+        <Color x:Key="AppTextColor">White</Color>
+        <Color x:Key="AppAccentButtonColor">#FFA400</Color>
+        <Color x:Key="AppAccentAlternativeButtonColor">#808080</Color>
+
+        <Style TargetType="Label" x:Key="CalcScreen">
+            <Setter Property="BackgroundColor" Value="{StaticResource AppBackgroundColor}" />
+            <Setter Property="TextColor" Value="{StaticResource AppTextColor}" />
+            <Setter Property="FontSize" Value="48" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="End" />
+            <Setter Property="LineBreakMode" Value="NoWrap" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+        <Style TargetType="Label"  x:Key="Equation">
+            <Setter Property="TextColor" Value="{StaticResource AppTextColor}" />
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="HorizontalTextAlignment" Value="End" />
+            <Setter Property="LineBreakMode" Value="NoWrap" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+        
+        <Style TargetType="Button" x:Key="CalcButton">
+            <Setter Property="BackgroundColor" Value="{StaticResource AppTextColor}" />
+            <Setter Property="TextColor" Value="{StaticResource AppBackgroundColor}" />
+            <Setter Property="FontSize" Value="36" />
+            <Setter Property="CornerRadius" Value="0" />
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource CalcButton}" x:Key="CalcAlternativeButton">
+            <Setter Property="BackgroundColor" Value="{StaticResource AppAccentButtonColor}" />
+            <Setter Property="TextColor" Value="{StaticResource AppTextColor}" />
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource CalcAlternativeButton}"  x:Key="CalcCleanButton">
+            <Setter Property="BackgroundColor" Value="{StaticResource AppAccentAlternativeButtonColor}" />
+        </Style>
+    </Application.Resources>
+</Application>
