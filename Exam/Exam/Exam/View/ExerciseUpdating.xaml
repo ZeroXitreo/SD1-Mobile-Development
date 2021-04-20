@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Exam"
+             x:Class="Exam.View.ExerciseUpdating">
+    <ContentPage.Resources>
+        <Style TargetType="Frame" x:Key="UnitAccessory">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="FlexLayout.WidthRequest" Value="100" />
+            <Setter Property="FlexLayout.HeightRequest" Value="100" />  
+            <Setter Property="FlexLayout.Grow" Value="0" />
+            <Setter Property="CornerRadius" Value="0" />
+            <Setter Property="Padding" Value="10, 5" />
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout BackgroundColor="{DynamicResource Prime2}">
+            <Image Margin="32, 32, 32, 0" Source="{local:ImageResource Exam.Images.Return.png}" WidthRequest="32" HeightRequest="32" HorizontalOptions="Start" />
+            <Label Margin="32, 16, 32, 0" FontSize="32" FontAttributes="Bold" TextColor="{DynamicResource Prime0}" Text="Skulder" />
+            <FlexLayout Wrap="Wrap" JustifyContent="Center">
+                <Frame Style="{DynamicResource UnitAccessory}">
+                    <Frame CornerRadius="10" Padding="0">
+                        <Image Aspect="AspectFill" Source="{local:ImageResource Exam.Images.videoExample.png}" />
+                    </Frame>
+                </Frame>
+                <Frame Style="{DynamicResource UnitAccessory}">
+                    <Frame CornerRadius="10" Padding="0" HeightRequest="200">
+                        <Image Aspect="AspectFill" Source="{local:ImageResource Exam.Images.videoExample.png}" />
+                    </Frame>
+                </Frame>
+                <Frame Style="{DynamicResource UnitAccessory}">
+                    <Frame CornerRadius="10" Padding="0" HeightRequest="200">
+                        <Image Aspect="AspectFill" Source="{local:ImageResource Exam.Images.videoExample.png}" />
+                    </Frame>
+                </Frame>
+                <Frame Style="{DynamicResource UnitAccessory}">
+                    <Frame CornerRadius="10" Padding="0" HeightRequest="200">
+                        <Image Aspect="AspectFill" Source="{local:ImageResource Exam.Images.videoExample.png}" />
+                    </Frame>
+                </Frame>
+                <Frame Style="{DynamicResource UnitAccessory}">
+                    <Frame CornerRadius="10" Padding="0" HeightRequest="200">
+                        <Image Aspect="AspectFill" Source="{local:ImageResource Exam.Images.videoExample.png}" />
+                    </Frame>
+                </Frame>
+            </FlexLayout>
+            <Frame Margin="16" Padding="0" CornerRadius="20">
+                <StackLayout>
+                    <StackLayout Margin="32">
+                        <Label FontAttributes="Bold" TextColor="{DynamicResource Prime0}" FontSize="18" Text="Træningsprogram for skulderen" />
+                        <Label TextColor="{DynamicResource Prime0}" LineBreakMode="WordWrap" >
+                            Træningsprogram for skulderenawefaw ef awef awef aw efa we fa wef aw efaw ef awe fa wf aw ef
+                            asdf
+                            awfe
+                            awef
+                            awfe
+                            awef
+                            awef
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="20" Margin="20,0,20,10" Padding="0">
+                <Button TextColor="White" BackgroundColor="#61D596" Text="Send program"></Button>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

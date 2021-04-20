@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exam.View.ClientSelected"
+             xmlns:view="clr-namespace:Exam.View"
+             xmlns:model="clr-namespace:Exam.Model"
+             x:DataType="view:ClientSelected">
+
+    
+    <StackLayout Style="{DynamicResource PageWrapper}">
+
+        <SearchBar Placeholder="Search items..." Style="{DynamicResource SearchBar}"/>
+
+        <Frame CornerRadius="20" Margin="20"  Style="{DynamicResource ClientSelectedUser}">
+            <StackLayout Style="{DynamicResource ClientSelectedUser}">
+                <Label Style="{DynamicResource PrimaryLabel}" Text="{Binding User.Name}" />
+                <Label Text="Info" Style="{DynamicResource SecondaryLabel}"></Label>
+                <Label Text="Info" Style="{DynamicResource SecondaryLabel}"></Label>
+                <Label Text="Info" Style="{DynamicResource SecondaryLabel}"></Label>
+            </StackLayout>
+        </Frame>
+
+        <ListView x:Name="ListViewOfPrograms" HasUnevenRows="True" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="model:Program">
+                    <ViewCell>
+                        <Frame CornerRadius="20" Margin="20"  Style="{DynamicResource UserListViewItem}">
+                            <StackLayout Style="{DynamicResource UserListViewItem}">
+                                <Label Text="{Binding ProgramName}" Style="{DynamicResource PrimaryLabel}"></Label>
+                                <Label Text="{Binding ProgramInfo}" Style="{DynamicResource SecondaryLabel}"></Label>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Frame CornerRadius="20" Margin="20,0,20,10" Padding="0">
+            <Button TextColor="White" BackgroundColor="#61D596" Text="Send program"></Button>
+        </Frame>
+    </StackLayout>
+</ContentPage>

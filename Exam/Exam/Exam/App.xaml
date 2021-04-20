@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exam.App">
+    <Application.Resources>
+        <Color x:Key="Accent" >#61D596</Color>
+        <Color x:Key="Prime0" >#1E202F</Color>
+        <Color x:Key="Prime1" >#C4C5CF</Color>
+        <Color x:Key="Prime2" >#F5F6FA</Color>
+
+        
+        
+        
+
+
+        <Style x:Key="PageWrapper" TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="#F5F6FA"></Setter>
+        </Style>
+
+        <Style x:Key="SearchBar" TargetType="SearchBar">
+            <Setter Property="Margin" Value="0,15"></Setter>
+        </Style>
+
+        <Style x:Key="UserListViewItem" TargetType="Frame">
+
+            <Setter Property="HasShadow" Value="True"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="Margin" Value="20"></Setter>
+            <Setter Property="BackgroundColor" Value="White"></Setter>
+        </Style>
+
+        <Style x:Key="BaseLabel" TargetType="Label">
+            <Setter Property="FontFamily" Value="Lobster"></Setter>
+        </Style>
+
+        <Style x:Key="PrimaryLabel" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+            <Setter Property="FontAttributes" Value="Bold"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="TextColor" Value="Black"></Setter>
+        </Style>
+
+        <Style x:Key="SecondaryLabel" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+            <Setter Property="TextColor" Value="#C4C5CF"></Setter>
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="FontAttributes" Value="Bold"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

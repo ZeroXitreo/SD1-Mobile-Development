@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exam.View.ProgramSelected"
+             xmlns:view="clr-namespace:Exam.View"
+             xmlns:model="clr-namespace:Exam.Model"
+             x:DataType="view:ProgramSelected">
+    <StackLayout>
+        <ScrollView>
+            <StackLayout Style="{StaticResource PageWrapper}">
+                <SearchBar Placeholder="Search items..." Style="{StaticResource SearchBar}"/>
+                <ListView x:Name="ListViewOfUsers" HasUnevenRows="True" ItemSelected="OnItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="model:Exercise">
+                            <ViewCell>
+                                <Frame CornerRadius="20" Margin="20"  Style="{StaticResource UserListViewItem}">
+                                    <StackLayout Style="{StaticResource UserListViewItem}">
+                                        <Label Text="{Binding Name}" Style="{StaticResource PrimaryLabel}"></Label>
+                                        <Label Text="{Binding Info}" Style="{StaticResource SecondaryLabel}"></Label>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+        <Frame CornerRadius="20" Margin="20,0,20,10" Padding="0">
+            <Button TextColor="White" BackgroundColor="#61D596" Text="Send Program"></Button>
+        </Frame>
+    </StackLayout>
+</ContentPage>

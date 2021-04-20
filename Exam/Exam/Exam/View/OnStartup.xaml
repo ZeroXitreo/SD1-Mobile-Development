@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exam.View.OnStartup"
+             xmlns:view="clr-namespace:Exam.View"
+             xmlns:model="clr-namespace:Exam.Model"
+             x:DataType="view:OnStartup">
+    <ScrollView>
+        <StackLayout Style="{DynamicResource PageWrapper}">
+            <SearchBar Placeholder="Search items..." Style="{DynamicResource SearchBar}"/>
+            <ListView x:Name="ListViewOfUsers"
+                      HasUnevenRows="True" ItemSelected="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="model:User">
+                        <ViewCell>
+                            <Frame CornerRadius="20" Margin="20"  Style="{DynamicResource UserListViewItem}">
+                                <StackLayout Style="{DynamicResource UserListViewItem}">
+                                    <Label Text="{Binding Name}" Style="{DynamicResource PrimaryLabel}"></Label>
+                                    <Label Text="{Binding Info}" Style="{DynamicResource SecondaryLabel}"></Label>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

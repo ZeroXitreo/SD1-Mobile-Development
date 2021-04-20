@@ -13,6 +13,10 @@
                      Text="Secondary Text Item"
                      Priority="2"
                      Clicked="OnItemClicked" />
+        <ToolbarItem Order="Secondary"
+                     Text="Secondary Text Item"
+                     Priority="3"
+                     Clicked="OnItemClicked" />
     </ContentPage.ToolbarItems>
     <StackLayout>
     </StackLayout>
