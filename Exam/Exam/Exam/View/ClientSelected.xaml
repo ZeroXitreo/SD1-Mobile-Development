@@ -11,8 +11,8 @@
 
         <SearchBar Placeholder="Search items..." Style="{DynamicResource SearchBar}"/>
 
-        <Frame CornerRadius="20" Margin="20"  Style="{DynamicResource ClientSelectedUser}">
-            <StackLayout Style="{DynamicResource ClientSelectedUser}">
+        <Frame CornerRadius="20" Margin="20" Style="{DynamicResource UserListViewItem}">
+            <StackLayout Style="{DynamicResource UserListViewItem}">
                 <Label Style="{DynamicResource PrimaryLabel}" Text="{Binding User.Name}" />
                 <Label Text="Info" Style="{DynamicResource SecondaryLabel}"></Label>
                 <Label Text="Info" Style="{DynamicResource SecondaryLabel}"></Label>
@@ -20,7 +20,7 @@
             </StackLayout>
         </Frame>
 
-        <ListView x:Name="ListViewOfPrograms" HasUnevenRows="True" ItemSelected="OnItemSelected">
+        <ListView x:Name="ListViewOfPrograms" HasUnevenRows="True" ItemSelected="OnItemSelected" >
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="model:Program">
                     <ViewCell>
@@ -34,8 +34,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Frame CornerRadius="20" Margin="20,0,20,10" Padding="0">
-            <Button TextColor="White" BackgroundColor="#61D596" Text="Send program"></Button>
-        </Frame>
     </StackLayout>
 </ContentPage>

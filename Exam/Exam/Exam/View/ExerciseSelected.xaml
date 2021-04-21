@@ -6,36 +6,34 @@
              xmlns:view="clr-namespace:Exam.View"
              xmlns:model="clr-namespace:Exam.Model"
              x:DataType="view:ExerciseSelected">
-    <ScrollView>
-        <StackLayout BackgroundColor="{DynamicResource Prime2}">
-            <Image Margin="32, 32, 32, 0" Source="{local:ImageResource Exam.Images.Return.png}" WidthRequest="32" HeightRequest="32" HorizontalOptions="Start" />
-            <Label Margin="32, 16, 32, 0" FontSize="32" FontAttributes="Bold" TextColor="{DynamicResource Prime0}" Text="{Binding Exercise.Name}" />
-            <Frame Margin="16" Padding="0" CornerRadius="20">
-                <StackLayout>
-                    <Frame CornerRadius="20" Padding="0" HeightRequest="200">
-                        <Image Aspect="AspectFill" Source="{local:ImageResource Exam.Images.videoExample.png}" />
-                    </Frame>
-                    <StackLayout Margin="32">
-                        <Label FontAttributes="Bold" TextColor="{DynamicResource Prime0}" FontSize="18" Text="Træningsprogram for skulderen" />
-                        <Label TextColor="{DynamicResource Prime0}" LineBreakMode="WordWrap" Text="{Binding Exercise.Info}" />
-                    </StackLayout>
+    <StackLayout Style="{StaticResource PageWrapper}">
+        <!--<Image Margin="32, 32, 32, 0" Source="{local:ImageResource Exam.Images.Return.png}" WidthRequest="32" HeightRequest="32" HorizontalOptions="Start" />-->
+        <!--<Label Margin="32, 16, 32, 0" FontSize="32" FontAttributes="Bold" TextColor="{DynamicResource Prime0}" Text="{Binding Exercise.Name}" />-->
+        <Frame Margin="16" Padding="0" CornerRadius="20" BackgroundColor="{AppThemeBinding Light={StaticResource Prime3}, Dark={StaticResource DarkPrime3}}">
+            <StackLayout>
+                <Frame CornerRadius="20" Padding="0" HeightRequest="800">
+                    <Image Aspect="AspectFill" Source="{local:ImageResource Exam.Images.videoExample.png}" />
+                </Frame>
+                <StackLayout Margin="32">
+                    <Label FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource Prime0}, Dark={StaticResource DarkPrime0}}" FontSize="18" Text="Træningsprogram for skulderen" />
+                    <Label TextColor="{AppThemeBinding Light={StaticResource Prime1}, Dark={StaticResource DarkPrime1}}" LineBreakMode="WordWrap" Text="{Binding Exercise.Info}" />
                 </StackLayout>
-            </Frame>
-            <ListView Margin="32">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame CornerRadius="20" Padding="0">
-                            <StackLayout Orientation="Horizontal">
-                                <StackLayout Margin="16" HorizontalOptions="FillAndExpand">
-                                    <Label FontAttributes="Bold" TextColor="{DynamicResource Prime0}" FontSize="22" Text="Afspænding" />
-                                    <Label FontAttributes="Bold" Text="Client info" TextColor="{DynamicResource Prime1}" />
-                                </StackLayout>
-                                <Image Source="{local:ImageResource Exam.Images.ExerciseExample.png}" Margin="16" VerticalOptions="Fill" HeightRequest="32" WidthRequest="32" />
+            </StackLayout>
+        </Frame>
+        <ListView Margin="32">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Frame CornerRadius="20" Padding="0" BackgroundColor="{AppThemeBinding Light={StaticResource Prime3}, Dark={StaticResource DarkPrime3}}">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Margin="16" HorizontalOptions="FillAndExpand">
+                                <Label FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource Prime0}, Dark={StaticResource DarkPrime0}}" FontSize="22" Text="Afspænding" />
+                                <Label FontAttributes="Bold" Text="Client info" TextColor="{AppThemeBinding Light={StaticResource Prime1}, Dark={StaticResource DarkPrime1}}" />
                             </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
-    </ScrollView>
+                            <Image Source="{local:ImageResource Exam.Images.ExerciseExample.png}" Margin="16" VerticalOptions="Fill" HeightRequest="32" WidthRequest="32" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

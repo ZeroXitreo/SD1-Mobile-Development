@@ -7,26 +7,36 @@
         <Color x:Key="Prime0" >#1E202F</Color>
         <Color x:Key="Prime1" >#C4C5CF</Color>
         <Color x:Key="Prime2" >#F5F6FA</Color>
+        <Color x:Key="Prime3" >#ffffff</Color>
 
-        
-        
-        
+        <Color x:Key="DarkAccent" >#61D596</Color>
+        <Color x:Key="DarkPrime0" >#ffffff</Color>
+        <Color x:Key="DarkPrime1" >#f5f6fa</Color>
+        <Color x:Key="DarkPrime2" >#1f1d2a</Color>
+        <Color x:Key="DarkPrime3" >#2d2f3c</Color>
 
 
-        <Style x:Key="PageWrapper" TargetType="StackLayout">
-            <Setter Property="BackgroundColor" Value="#F5F6FA"></Setter>
+
+
+
+
+        <Style x:Key="PageWrapper" TargetType="Layout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Prime2}, Dark={StaticResource DarkPrime2}}" />
         </Style>
 
         <Style x:Key="SearchBar" TargetType="SearchBar">
             <Setter Property="Margin" Value="0,15"></Setter>
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Prime3}, Dark={StaticResource DarkPrime3}}"></Setter>
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Prime0}, Dark={StaticResource DarkPrime0}}"></Setter>
+            <Setter Property="CancelButtonColor" Value="{AppThemeBinding Light={StaticResource Prime0}, Dark={StaticResource DarkPrime0}}"></Setter>
+            <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Prime1}, Dark={StaticResource DarkPrime1}}"></Setter>
         </Style>
 
         <Style x:Key="UserListViewItem" TargetType="Frame">
-
             <Setter Property="HasShadow" Value="True"></Setter>
             <Setter Property="Padding" Value="5"></Setter>
             <Setter Property="Margin" Value="20"></Setter>
-            <Setter Property="BackgroundColor" Value="White"></Setter>
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Prime3}, Dark={StaticResource DarkPrime3}}"></Setter>
         </Style>
 
         <Style x:Key="BaseLabel" TargetType="Label">
@@ -36,11 +46,11 @@
         <Style x:Key="PrimaryLabel" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
             <Setter Property="FontAttributes" Value="Bold"></Setter>
             <Setter Property="FontSize" Value="18"></Setter>
-            <Setter Property="TextColor" Value="Black"></Setter>
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Prime0}, Dark={StaticResource DarkPrime0}}"></Setter>
         </Style>
 
         <Style x:Key="SecondaryLabel" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
-            <Setter Property="TextColor" Value="#C4C5CF"></Setter>
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Prime1}, Dark={StaticResource DarkPrime1}}"></Setter>
             <Setter Property="FontSize" Value="12"></Setter>
             <Setter Property="FontAttributes" Value="Bold"></Setter>
         </Style>
